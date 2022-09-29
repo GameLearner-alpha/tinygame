@@ -1,41 +1,42 @@
 //hero's inventory
 //demonstrates arrays
 
-#include"game.h"
+#include<iostreanm>
+#include<string>
 
 void HI_Game()
 {
-	const int MAX_ITEMS = 10;	//item:ÏîÄ¿£¬Ìõ¿î£¬ÉÌÆ·¡£ÕâÀïMAX_ITEMSÊÇÉèÖÃ±³°üÈİÁ¿
-	string inventory[MAX_ITEMS];	//inventory£ºÄ¿Â¼£¬´æ»õ£¬¿â´æ£¬Àí½âÎªÎïÆ·À¸
+	const int MAX_ITEMS = 10;	//item:é¡¹ç›®ï¼Œæ¡æ¬¾ï¼Œå•†å“ã€‚è¿™é‡ŒMAX_ITEMSæ˜¯è®¾ç½®èƒŒåŒ…å®¹é‡
+	string inventory[MAX_ITEMS];	//inventoryï¼šç›®å½•ï¼Œå­˜è´§ï¼Œåº“å­˜ï¼Œç†è§£ä¸ºç‰©å“æ 
 	int numItems = 0;
-	inventory[numItems++] = "sword";	//´æÈëÎïÆ·£¬²¢¼ÆÊı£¬sword£º½££¬armor£º¿ø¼×£¬shield£º¶ÜÅÆ
+	inventory[numItems++] = "sword";	//å­˜å…¥ç‰©å“ï¼Œå¹¶è®¡æ•°ï¼Œswordï¼šå‰‘ï¼Œarmorï¼šç›”ç”²ï¼Œshieldï¼šç›¾ç‰Œ
 	inventory[numItems++] = "armor";
 	inventory[numItems++] = "shield";
 	cout << "Your items:\n";
-	for (int i = 0; i < numItems; i++)	//Êä³öheroÓĞµÄÎïÆ·£¨³õÊ¼ÎïÆ·£©
+	for (int i = 0; i < numItems; i++)	//è¾“å‡ºheroæœ‰çš„ç‰©å“ï¼ˆåˆå§‹ç‰©å“ï¼‰
 	{
 		cout << inventory[i] << endl;
 	}
-	cout <<  "\nYou trade your sword for a battle axe.";	//ÄãÓÃ½£»»ÁËÒ»°ÑÕ½¸«¡£
+	cout <<  "\nYou trade your sword for a battle axe.";	//ä½ ç”¨å‰‘æ¢äº†ä¸€æŠŠæˆ˜æ–§ã€‚
 	inventory[0] = "battle axe";
 	cout << "\nYour items:\n";
-	for (int i = 0; i < numItems; i++)	//ÔÙ´ÎÊä³öheroÓµÓĞµÄÎïÆ·
+	for (int i = 0; i < numItems; i++)	//å†æ¬¡è¾“å‡ºheroæ‹¥æœ‰çš„ç‰©å“
 	{
 		cout << inventory[i] << endl;
 	}
 	cout << "\nThe item name '" << inventory[0] << "' has ";
 	cout << inventory[0].size() << " letters in it.\n";
 	cout << "\nYou find a healing potion.";
-	if (numItems < MAX_ITEMS)	//ÅĞ¶Ï³ÖÓĞÎïÆ·ÊıÁ¿ÊÇ·ñ³¬¹ı±³°üÈİÁ¿
+	if (numItems < MAX_ITEMS)	//åˆ¤æ–­æŒæœ‰ç‰©å“æ•°é‡æ˜¯å¦è¶…è¿‡èƒŒåŒ…å®¹é‡
 	{
 		inventory[numItems++] = "healing potion";
 	}
 	else
 	{
-		cout << "You have too many items and can't carry anther.";	//Êä³ö³¬³ö±³°üÈİÁ¿µÄ½á¹û
+		cout << "You have too many items and can't carry anther.";	//è¾“å‡ºè¶…å‡ºèƒŒåŒ…å®¹é‡çš„ç»“æœ
 	}
 	cout << "\nYour items:\n";
-	for (int i = 0 ; i < numItems; i++)	//ÔÙ´ÎÊä³öheroÓµÓĞµÄÎïÆ·
+	for (int i = 0 ; i < numItems; i++)	//å†æ¬¡è¾“å‡ºheroæ‹¥æœ‰çš„ç‰©å“
 	{
 		cout << inventory[i] << endl;
 	}
