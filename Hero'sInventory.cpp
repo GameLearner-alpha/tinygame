@@ -4,7 +4,7 @@
 #include<iostreanm>
 #include<string>
 
-void HI_Game()
+int main()
 {
 	const int MAX_ITEMS = 10;	//item:项目，条款，商品。这里MAX_ITEMS是设置背包容量
 	string inventory[MAX_ITEMS];	//inventory：目录，存货，库存，理解为物品栏
